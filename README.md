@@ -52,6 +52,13 @@ docker container run --name test-container1 -it test-image:v1 /bin/bash
 root@71fdfe8dfb61:/# cat /etc/issue
 Ubuntu 18.04.6 LTS \n \l
 ```
+## コンテナの作成
+
+```bash
+-pを使用してポートを開くことも可能　EX）　ginでは8080ポートを使用するので　XXXX:8080(gin)
+docker container create　-p 8080:8080  --name {コンテナ名} -it {image名} 
+```
+
 
 ## コンテナの起動
 
