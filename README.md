@@ -56,7 +56,7 @@ Ubuntu 18.04.6 LTS \n \l
 
 ```bash
 # -pを使用してポートを開くことも可能　EX）　ginでは8080ポートを使用するので　XXXX:8080(gin)
-docker container create　-p 8080:8080  --name {コンテナ名} -it {image名} 
+docker container create　　-p 8080:8080  --name {コンテナ名} -it {image名} 
 ```
 
 
