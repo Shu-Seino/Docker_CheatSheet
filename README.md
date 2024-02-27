@@ -82,8 +82,9 @@ $ docker attach {CONTAINER IDまたはコンテナ名}
 ## コンテナの一覧
 
 ```bash
+# 実行中のコンテナのみ
 docker ps
-実行中のコンテナのみ
+# 全てのコンテナ
 docker ps -a
 ```
 
@@ -91,10 +92,14 @@ docker ps -a
 
 ```bash
 docker rm -f {CONTAINER ID or コンテナ名}
+# 停止中全てのコンテナ全削除
+docker rm $(docker ps -q -a)  
 ```
 
 ## Dockerイメージの削除
 
 ```bash
 docker rmi {IMAGE ID or イメージ名}
+# 使用していないイメージ前削除
+docker rmi $(docker images -q)
 ```
